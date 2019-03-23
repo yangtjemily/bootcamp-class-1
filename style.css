@@ -12,6 +12,7 @@ html {
 /* tag selector */
 body {
   margin: 0;
+  background-color: pink;
 }
 /* class selector */
 .notif-banner {
