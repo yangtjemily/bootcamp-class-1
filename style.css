@@ -1,0 +1,132 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+/* *: all selector -> select everything. affect performance */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* tag selector */
+body {
+  margin: 0;
+}
+/* class selector */
+.notif-banner {
+  background-color: black;
+  color: white; /*content color*/
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+}
+
+/*method1: combinator: child selector, .link must be direct child of .notif=banner */
+/* 这个更好，因为more context */
+.notif-banner > .link {
+  color: white;
+}
+/*method2: combinator: descendant selector, .link must be child of .notif=banner */
+/* 下面的级数更高 */
+.notif-banner .link {
+  color: white;
+}
+
+/* psuedo class */
+.notif-banner > .link:hover {
+  color: wheat;
+}
+/* .box {
+  display: inline-block;
+  width: 50%;
+  height: 300px;
+  background-color: red;
+  border: 10px solid blue;
+  padding: 50px;
+} */
+
+/* .box2 {
+  left: 50%;
+} */
+
+.notif-banner > .divider {
+  margin-left: 6px; /*离左边的物体的距离*/
+  margin-right: 6px;
+  margin: 0 6px; /*上下：0 左右：6*/
+}
+
+.global-menu {
+  display: flex;
+  /* flex-direction: column */
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 66px;
+  /* magic step lol */
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.site-menu > li {
+  margin-right: 20px;
+}
+
+.util-menu > li {
+  margin-left: 20px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* method 1 */
+/* .site-menu > .li:hover {
+  color: blue;
+}
+
+.util-menu > .li:hover {
+  color: blue;
+} */
+
+/* better way: make a child selector (combinator)*/
+.util-menu > li:hover {
+  color: pink;
+}
+
+.site-menu > li:hover {
+  color: pink;
+}
+/* the order the selector is written down matters  */
+.global-menu li:hover {
+  color: aqua;
+}
+.small-image-container {
+  display: flex;
+}
+.small-image {
+  height: 650px;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* necessary for contain but not cover */
+}
+
+.large-image {
+  height: 650px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* necessary for contain but not cover */
+}
+
+.image {
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat; /* necessary for contain but not cover */
+}
