@@ -131,3 +131,55 @@ ul {
   background-position: center;
   background-repeat: no-repeat; /* necessary for contain but not cover */
 }
+
+.container {
+  display: flex;
+  color: #666;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  vertical-align: baseline;
+  width: 100%;
+  padding: 15px 20px;
+  height: 100px;
+  list-style: none;
+}
+.container .address {
+  margin-top: 1.2em;
+}
+
+.footer-menu-hide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-menu li {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #666;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}
+.footer-menu .logo {
+  padding-bottom: 10px;
+}
+
+.newsletter {
+  background: none;
+  border: 1px solid #222;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1em 2em;
+}
+
+#footer-logo a {
+  color: black;
+  text-decoration: none;
+}
